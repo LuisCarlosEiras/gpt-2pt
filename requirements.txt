@@ -1,6 +1,5 @@
-transformers==3.3.1
-
-request==2.24.0
 streamlit==0.56.0
 tensorflow==2.2.0
+transformers==3.0.2
+request==2.24.0
 googletrans==3.0.0
