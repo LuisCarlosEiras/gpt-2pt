@@ -1,6 +1,8 @@
 import gc
 gc.collect()
 
+import transformers
+
 import streamlit as st
 from transformers import pipeline # , set_seed
 from transformers.pipelines import TextGenerationPipeline
