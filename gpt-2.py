@@ -40,6 +40,6 @@ if __name__ == '__main__':
 
     if starting_text:
         response = generator.generate_text(starting_text)
-        result = translator.translate(response, dest='pt')
+        result = translator.translate(response, src= 'en',dest='pt')
         st.markdown(f'Completed phrase: {result}')
 
