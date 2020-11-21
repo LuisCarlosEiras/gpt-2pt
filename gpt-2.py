@@ -1,6 +1,7 @@
 import warnings
 warnings.filterwarnings("ignore")
 
+import pandas as pd
 import streamlit as st
 from transformers import pipeline, set_seed
 from transformers.pipelines import TextGenerationPipeline
@@ -11,7 +12,7 @@ translator = Translator()
 
 class TextGenerator:
     def __init__(self):
-        self.generator = [] # alteração 
+        df.dropna() # aletração 
         self.generator: TextGenerationPipeline
         self.max_length = 300
         set_seed(1)
