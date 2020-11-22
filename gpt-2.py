@@ -29,9 +29,9 @@ def instantiate_generator():
     return generator
 
 if __name__ == '__main__':
-    st.title('GPT-2')
+    st.title('GPT-2 em português')
 
-    starting_text = st.text_area('Deixe o GPT-2 completar sua frase..') 
+    starting_text = st.text_area('Deixe o GPT-2 completar sua frase...') 
     generator = translator.translate(starting_text, src= 'pt',dest='en')							
     generator = instantiate_generator()
 
