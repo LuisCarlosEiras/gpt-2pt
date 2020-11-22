@@ -10,6 +10,7 @@ translator = Translator()
 
 class TextGenerator:
     def __init__(self):
+        self = []   # alteração
         self.generator: TextGenerationPipeline
         self.max_length = 300
         set_seed(1)
