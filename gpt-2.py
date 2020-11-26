@@ -32,7 +32,7 @@ if __name__ == '__main__':
     st.title('GPT-2 em português')
 
     text_unlim = st.text_area("Area for text", "Text to Display")
-    generator = translator.translate(tex_unlim, src= 'pt',dest='en')							
+    generator = translator.translate(text_unlim, src= 'pt',dest='en')							
     generator = instantiate_generator()
 
     if text_unlim:
