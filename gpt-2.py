@@ -31,7 +31,7 @@ def instantiate_generator():
 if __name__ == '__main__':
     st.title('GPT-2 em português')
 
-    text_unlim = st.text_area("Area for text", "Text to Display")
+    text_unlim = st.text_area("Escreva suas palavras ou frases abaixo", "Escreva aqui em cima e clique Ctrl+Del")
     generator = translator.translate(text_unlim, src= 'pt',dest='en')							
     generator = instantiate_generator()
 
