@@ -17,8 +17,8 @@ class TextGenerator:
     def load_generator(self) -> None:  
         self.generator = pipeline('text-generation', model='gpt2')
       
-    def generate_text(self, starting_text: str) -> str:
-        return self.generator(starting_text,
+    def generate_text(self, text_unlim: str) -> str:
+        return self.generator(text_unlim,
                               max_length=self.max_length,
                               num_return_sequences=1)[0]['generated_text']
 
@@ -32,11 +32,11 @@ if __name__ == '__main__':
     st.title('GPT-2 em português')
 
     text_unlim = st.text_area("Area for text", "Text to Display")
-    generator = translator.translate(starting_text, src= 'pt',dest='en')							
+    generator = translator.translate(tex_unlim, src= 'pt',dest='en')							
     generator = instantiate_generator()
 
-    if starting_text:
-        response = generator.generate_text(starting_text)
+    if text_unlim:
+        response = generator.generate_text(text_unlim)
         result = translator.translate(response, src= 'en',dest='pt')
         st.markdown(f'Completed phrase: {result}')
 
