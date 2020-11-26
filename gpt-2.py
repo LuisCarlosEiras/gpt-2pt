@@ -1,6 +1,9 @@
 import warnings
 warnings.filterwarnings("ignore")
 
+import gc
+gc.collect()
+
 import streamlit as st
 from transformers import pipeline, set_seed
 from transformers.pipelines import TextGenerationPipeline
