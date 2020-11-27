@@ -43,7 +43,8 @@ if __name__ == '__main__':
         result = translator.translate(response, src= 'en',dest='pt')
         st.markdown(f'Completed phrase: {result}')
              
-    result = ("AttributeError: 'NoneType' object has no attribute 'group'")
+            
+if result = ("AttributeError: 'NoneType' object has no attribute 'group'")
     return text_unlim
     
         
