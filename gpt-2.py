@@ -44,8 +44,7 @@ if __name__ == '__main__':
         st.markdown(f'Completed phrase: {result}')
              
             
-if result = ("AttributeError: 'NoneType' object has no attribute 'group'")
-    return text_unlim
+
     
         
 
