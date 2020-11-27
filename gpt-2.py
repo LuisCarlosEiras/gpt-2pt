@@ -40,12 +40,8 @@ if __name__ == '__main__':
 
     if text_unlim:
         response = generator.generate_text(text_unlim)
-        result = translator.translate(response, src= 'en',dest='pt')
-        
-    
-        result = ("AttributeError: 'NoneType' object has no attribute 'group'")
-        return text_unlim
-        
+        result = translator.translate(response, src= 'en',dest='pt'), ("AttributeError: 'NoneType' object has no attribute 'group'")=FALSE
+               
         st.markdown(f'Completed phrase: {result}')
              
             
