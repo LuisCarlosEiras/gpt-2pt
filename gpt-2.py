@@ -11,12 +11,6 @@ from transformers.pipelines import TextGenerationPipeline
 from googletrans import Translator
 translator = Translator()
 
-from django import template
-register = template.Library() 
-@register.filter(name='has_group') 
-def has_group(user, group_name):
-    return user.groups.filter(name=group_name).exists() 
-
 class TextGenerator:
     def __init__(self):
         self.generator: TextGenerationPipeline
