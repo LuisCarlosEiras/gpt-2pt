@@ -37,9 +37,7 @@ if __name__ == '__main__':
     text_unlim = st.text_area("Escreva suas palavras ou frases abaixo", "Escreva aqui e clique Ctrl + Enter")
     generator = translator.translate(text_unlim, src='pt', dest='en')							
     generator = instantiate_generator()
-    instantiate_generator = ("AttributeError: 'NoneType' object has no attribute 'group'")
-    return generator
-   
+     
     if text_unlim:
         response = generator.generate_text(text_unlim)
         result = translator.translate(response, src= 'en',dest='pt')               
