@@ -8,8 +8,9 @@ import streamlit as st
 from transformers import pipeline, set_seed
 from transformers.pipelines import TextGenerationPipeline
 
-from googletrans import Translator
-translator = Translator()
+# from googletrans import Translator
+# translator = Translator()
+from translate import Translator
 
 class TextGenerator:
     def __init__(self):
@@ -35,12 +36,13 @@ if __name__ == '__main__':
     st.title('GPT-2 em português')
 
     text_unlim = st.text_area("Escreva suas palavras ou frases abaixo", "Escreva aqui e clique Ctrl + Enter")
-    generator = translator.translate(text_unlim, src='pt', dest='en')							
+    # generator = translator.translate(text_unlim, src='pt', dest='en')	
+    generator = translator.translate(text_unlim, to_lang="en") # src='pt', dest='en')	
     generator = instantiate_generator()
      
     if text_unlim:
         response = generator.generate_text(text_unlim)
-        result = translator.translate(response, src= 'en',dest='pt')               
+        result = translator.translate(response, to_lang="pt") # src= 'en', dest='pt')               
         st.markdown(f'Completed phrase: {result}')            
 
     
