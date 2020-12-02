@@ -11,6 +11,7 @@ from transformers.pipelines import TextGenerationPipeline
 # from googletrans import Translator
 # translator = Translator()
 from translate import Translator
+translator = Translator
 
 class TextGenerator:
     def __init__(self):
