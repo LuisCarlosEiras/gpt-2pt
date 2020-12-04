@@ -36,7 +36,7 @@ if __name__ == '__main__':
 
     text_unlim = st.text_area("Escreva suas palavras ou frases abaixo", "Escreva aqui e clique Ctrl + Enter")
     translate_text = translator.translate(text_unlim, lang_tgt='en')  
-    generator = translate_text()
+    generator = translate_text
      
     # if text_unlim:
     #     response = generator.generate_text(text_unlim)
