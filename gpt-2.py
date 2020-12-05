@@ -11,6 +11,7 @@ from transformers.pipelines import TextGenerationPipeline
 
 from google_trans_new import google_translator 
 translator = google_translator()
+detector = google_translator() 
 
 class TextGenerator:
     def __init__(self):
@@ -42,6 +43,8 @@ if __name__ == '__main__':
     if text_unlim:
         response = generator.generate_text(text_unlim)
         result = translator.translate(response, lang_src= 'en', lang_tgt='pt') 
+        if result = detector.detect('en' = FALSE)
+            return reponse
         st.markdown(f'Completed phrase: {result}')
 
     
