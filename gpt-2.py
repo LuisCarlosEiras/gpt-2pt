@@ -43,7 +43,6 @@ if __name__ == '__main__':
     if text_unlim:
         response = generator.generate_text(text_unlim)
         result = translator.translate(response, lang_src= 'en', lang_tgt='pt') 
-        result = detector.detect('pt')
         st.markdown(f'Completed phrase: {result}')
 
     
