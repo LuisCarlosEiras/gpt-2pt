@@ -14,7 +14,7 @@ translator = google_translator()
 class TextGenerator:
     def __init__(self):
         self.generator: TextGenerationPipeline
-        self.max_length = 500
+        self.max_length = 300
         set_seed(1)
 
     def load_generator(self) -> None:  
@@ -37,13 +37,11 @@ if __name__ == '__main__':
     text_unlim = st.text_area("Escreva suas palavras ou frases abaixo", "Escreva aqui e clique Ctrl + Enter")
     generator = translator.translate(text_unlim, lang_tgt='en')  
     generator = instantiate_generator()
-    
        
     if text_unlim:
-        response = generator(text_unlim)
-        translate_text = translator.translate(text_unlim, lang_tgt='pt')  
-        result = translator.translate(response)                
-        st.markdown(f'Completed phrase: {result}')            
+        response = generator.generate_text(text_unlim)
+        result = translator.translate(response, lang_src= 'en', lang_tgt='pt')
+        st.markdown(f'Completed phrase: {result}')
 
     
         
