@@ -35,12 +35,12 @@ if __name__ == '__main__':
     st.title('GPT-2 em português')
 
     text_unlim = st.text_area("Escreva suas palavras ou frases abaixo", "Escreva aqui e clique Ctrl + Enter")
-    generator = translator.translate(text_unlim, lang_src = 'pt', lang_tgt='en')  
+    generator = translator.translate(text_unlim, lang_tgt='en')  # lang_src= 'pt',
     generator = instantiate_generator()
        
     if text_unlim:
         response = generator.generate_text(text_unlim)
-        result = translator.translate(response, lang_src= 'en', lang_tgt='pt')
+        result = translator.translate(response, lang_tgt='pt') # lang_src= 'en',
         st.markdown(f'Completed phrase: {result}')
 
     
