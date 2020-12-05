@@ -43,10 +43,10 @@ if __name__ == '__main__':
        
     if text_unlim:
         response = generator.generate_text(text_unlim)
-        st.markdown (f'Completed phrase: {response}')
+        st.markdown (f'Frase gerada: {response}')
         
         result = translator.translate(response, lang_src= 'en', lang_tgt='pt') 
-        st.markdown(f'Completed phrase: {result}')
+        st.markdown(f'Frase traduzida: {result}')
 
     
         
