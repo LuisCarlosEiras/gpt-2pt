@@ -16,7 +16,7 @@ detector = google_translator()
 class TextGenerator:
     def __init__(self):
         self.generator: TextGenerationPipeline
-        self.max_length = 50
+        self.max_length = 300
         set_seed(1)
 
     def load_generator(self) -> None:  
