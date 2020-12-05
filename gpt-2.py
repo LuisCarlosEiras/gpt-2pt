@@ -39,9 +39,12 @@ if __name__ == '__main__':
     text_unlim = st.text_area("Escreva suas palavras ou frases abaixo", "Escreva e clique Ctrl + Enter")
     generator = translator.translate(text_unlim, lang_src= 'pt', lang_tgt='en') 
     generator = instantiate_generator()
+    
        
     if text_unlim:
         response = generator.generate_text(text_unlim)
+        st.markdown (f'Completed phrase: {response}')
+        
         result = translator.translate(response, lang_src= 'en', lang_tgt='pt') 
         st.markdown(f'Completed phrase: {result}')
 
