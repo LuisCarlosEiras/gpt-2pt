@@ -16,12 +16,14 @@ class TextGenerator:
         return self.generator(starting_text,
                               max_length=self.max_length,
                               num_return_sequences=1)[0]['generated_text']
-    @st.cache(allow_output_mutation=True)
-    
+
+
+@st.cache(allow_output_mutation=True)
 def instantiate_generator():
     generator = TextGenerator()
     generator.load_generator()
     return generator
+
 
 if __name__ == '__main__':
     st.title('GPT-2 Demo')
