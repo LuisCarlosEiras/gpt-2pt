@@ -49,6 +49,6 @@ if __name__ == '__main__':
         result = translator.translate(response, lang_src= 'en', lang_tgt='pt') 
         st.markdown(f'Frase traduzida: {result}')
        
- st.button("Clique para gerar nova frase")            
+    st.button("Clique para gerar nova frase")            
         
 
