@@ -2,11 +2,10 @@ import streamlit as st
 from transformers import pipeline, set_seed
 from transformers.pipelines import TextGenerationPipeline
 
-
 class TextGenerator:
     def __init__(self):
         self.generator: TextGenerationPipeline
-        self.max_length = 30
+        self.max_length = 300
         set_seed(1)
 
     def load_generator(self) -> None:
