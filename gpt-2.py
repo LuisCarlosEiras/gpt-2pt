@@ -16,7 +16,7 @@ detector = google_translator()
 class TextGenerator:
     def __init__(self):
         self.generator: TextGenerationPipeline
-        self.max_length = 300
+        self.max_length = 30
         set_seed(1)
 
     def load_generator(self) -> None:  
@@ -32,6 +32,17 @@ def instantiate_generator():
     generator = TextGenerator()
     generator.load_generator()
     return generator
+
+if __name__ == '__main__':
+    st.title('GPT-2 Demo')
+    starting_text = st.text_area('Let GPT-2 finish your thoughts ...')
+    generator = instantiate_generator()
+
+    if starting_text:
+        response = generator.generate_text(starting_text)
+        st.markdown(f'Completed phrase: {response}')
+       
+# alterações -------------------------------------
 
 if __name__ == '__main__':
     st.title('GPT-2 em português, em teste')
