@@ -44,22 +44,22 @@ if __name__ == '__main__':
        
 # alterações -------------------------------------
 
-if __name__ == '__main__':
-    st.title('GPT-2 em português, em teste')
+# if __name__ == '__main__':
+#    st.title('GPT-2 em português, em teste')
 
-    text_unlim = st.text_area("Escreva suas palavras ou frases abaixo e clique Ctrl + Enter")
-    generator = translator.translate(text_unlim, lang_src= 'pt', lang_tgt='en') 
-    generator = instantiate_generator()
+#    text_unlim = st.text_area("Escreva suas palavras ou frases abaixo e clique Ctrl + Enter")
+#    generator = translator.translate(text_unlim, lang_src= 'pt', lang_tgt='en') 
+#    generator = instantiate_generator()
     
        
-    if text_unlim:
-        response = generator.generate_text(text_unlim)
-        st.markdown (f'Frase gerada: {response}')
+#    if text_unlim:
+#        response = generator.generate_text(text_unlim)
+#        st.markdown (f'Frase gerada: {response}')
         
-        result = translator.translate(response, lang_src= 'en', lang_tgt='pt') 
-        st.markdown(f'Frase traduzida: {result}')
+#        result = translator.translate(response, lang_src= 'en', lang_tgt='pt') 
+#        st.markdown(f'Frase traduzida: {result}')
        
-st.button("Clique para gerar nova frase")
+# st.button("Clique para gerar nova frase")
 
     
         
