@@ -24,14 +24,31 @@ def instantiate_generator():
     return generator
 
 
-if __name__ == '__main__':
-    st.title('GPT-2 Demo')
-    starting_text = st.text_area('Let GPT-2 finish your thoughts ...')
-    generator = instantiate_generator()
+#if __name__ == '__main__':
+#    st.title('GPT-2 Demo')
+#    starting_text = st.text_area('Let GPT-2 finish your thoughts ...')
+#    generator = instantiate_generator()
 
-    if starting_text:
-        response = generator.generate_text(starting_text)
-        st.markdown(f'Completed phrase: {response}')
+#    if starting_text:
+#        response = generator.generate_text(starting_text)
+#        st.markdown(f'Completed phrase: {response}')
          
+
+if __name__ == '__main__':
+    st.title('GPT-2 em português, em teste')
+
+    text_unlim = st.text_area("Escreva suas palavras ou frases abaixo e clique Ctrl + Enter")
+    generator = translator.translate(text_unlim, lang_src= 'pt', lang_tgt='en') 
+    generator = instantiate_generator()
+    
+       
+    if text_unlim:
+        response = generator.generate_text(text_unlim)
+        st.markdown (f'Frase gerada: {response}')
+        
+        result = translator.translate(response, lang_src= 'en', lang_tgt='pt') 
+        st.markdown(f'Frase traduzida: {result}')
+       
+ st.button("Clique para gerar nova frase")            
         
 
