@@ -30,6 +30,9 @@ def instantiate_generator():
 
 if __name__ == '__main__':
     st.title('GPT-2 em português, em teste')
+    
+    from PIL import Image
+    Image = Image.open('gpt-2.png')
 
     text_unlim = st.text_area("Escreva suas palavras ou frases abaixo e clique Ctrl + Enter")
     generator = translator.translate(text_unlim, lang_src= 'pt', lang_tgt='en') 
