@@ -30,8 +30,7 @@ def instantiate_generator():
 
 from PIL import Image
 image = Image.open('gpt-2.png')
-st.image(image, caption='Gerador de texto',
-...          use_column_width=True)
+st.image(image, caption='Gerador de texto', use_column_width=True)
     
 if __name__ == '__main__':
     st.title('GPT-2 em português, em teste')
