@@ -29,7 +29,7 @@ def instantiate_generator():
     return generator
 
 from PIL import Image
-Image = Image.open('gpt-2.png')
+image = Image.open('gpt-2.png')
     
 if __name__ == '__main__':
     st.title('GPT-2 em português, em teste')
