@@ -29,7 +29,7 @@ def instantiate_generator():
     return generator
 
 from PIL import Image
-image = Image.open('gpt-2.png', width = 150)
+image = Image.open('gpt-2.png')
 st.image(image, caption='Gerador de texto', use_column_width=True)
 
 if __name__ == '__main__':
