@@ -1,3 +1,6 @@
+import gc
+gc.collect()
+
 import streamlit as st
 from transformers import pipeline, set_seed
 from transformers.pipelines import TextGenerationPipeline
@@ -25,15 +28,6 @@ def instantiate_generator():
     generator.load_generator()
     return generator
 
-#if __name__ == '__main__':
-#    st.title('GPT-2 Demo')
-#    starting_text = st.text_area('Let GPT-2 finish your thoughts ...')
-#    generator = instantiate_generator()
-
-#    if starting_text:
-#        response = generator.generate_text(starting_text)
-#        st.markdown(f'Completed phrase: {response}')   
-
 if __name__ == '__main__':
     st.title('GPT-2 em português, em teste')
 
@@ -42,9 +36,7 @@ if __name__ == '__main__':
     generator = instantiate_generator()    
        
     if text_unlim:
-        response = generator.generate_text(text_unlim)
- #        st.markdown (f'Frase gerada: {response}')
-        
+        response = generator.generate_text(text_unlim)      
         result = translator.translate(response, lang_src= 'en', lang_tgt='pt') 
         st.markdown(f'Sua frase gpt-2: {result}')
        
