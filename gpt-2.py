@@ -44,6 +44,6 @@ if __name__ == '__main__':
         result = translator.translate(response, lang_src= 'en', lang_tgt='pt') 
         st.markdown(f'Sua frase gpt-2: {result}')
        
-    st.button("Clique para gerar nova frase")            
+st.button("Clique para gerar nova frase")            
         
 
