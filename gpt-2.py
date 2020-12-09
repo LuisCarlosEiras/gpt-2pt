@@ -30,7 +30,7 @@ def instantiate_generator():
 
 from PIL import Image
 image = Image.open('gpt-2.png')
-st.image(image, caption='O GPT-2 é uma rede neural da OpenAI capaz de gerar textos, que parecem escritos por humanos, a partir de 8 milhões de documentos em 40 GB. Esta versão gera textos preferencialmente em português.', use_column_width=True)
+st.image(image, caption='O GPT-2 é uma rede neural da OpenAI capaz de gerar textos, que parecem escritos por humanos.', use_column_width=True)
 
 if __name__ == '__main__':
     st.title('GPT-2 em português')
