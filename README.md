@@ -8,8 +8,10 @@ Ao se registrar sua mercadoria na Blockchain, o usuário poderá registrar tamb�
 
 ![novosmercados2](novosmercados2.jpg)
 
-Esse database será processado a cada novo registro e irá estabelecer as ligações entre os usuários de compra e venda. 
+Esse database será processado a cada novo registro e irá estabelecer as ligações de compra e venda dos usuários. 
 
 ![novosmercados](novosmercados.jpg)
+
+Em desenvolvimento 
 
 https://share.streamlit.io/luiscarloseiras/gpt-2pt/main/gpt-2.py
